@@ -1,7 +1,9 @@
 from json import load
+
 from pathlib import Path
-from numpy import polyfit, poly1d
 import numpy as np
+
+
 
 class IDData:
     def __init__(self,
@@ -13,7 +15,11 @@ class IDData:
         self.fitted_function = self._fit_data()
 
 
-    def _unpack_iddata(self):
+    def _unpack_iddata(self) -> (list, list):
+        """
+        Unpacks json-stored user_id data into two separate lists for
+        constructing a function
+        """
         with open(self.iddata_path) as string_data:
             iddata = load(string_data)
 
@@ -24,10 +30,13 @@ class IDData:
         iddata_x = np.array(list(iddata.keys()))
         iddata_y = np.array(list(iddata.values()))
 
-        return iddata_x, iddata_y
+        return (iddata_x, iddata_y)
 
 
-    def _fit_data(self, order=6):
+    def _fit_data(self, order: int = 6):
+        """
+        Fits (constructs) the user_id data into a function
+        """
         fitted = np.polyfit(self.x, self.y, order)
         fitted_function = np.poly1d(fitted)
 

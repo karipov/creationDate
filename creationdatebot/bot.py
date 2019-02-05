@@ -5,6 +5,7 @@ import telebot
 from config.config_handler import Config
 from data.data_handler import IDData
 from treeify import custom_display
+import util
 
 # debug libs
 # import json
@@ -24,17 +25,20 @@ def send_start(message):
 @bot.message_handler(content_types=["text"])
 def send_age(message):
     cid = message.chat.id
+    print("cid:", cid)
 
     # clean out the rest of the pyTelegramBotAPI's json
-    json_message = message.__dict__["json"]
+    json_message = message.__dict__# ["json"]
+    json_message = util.clean_dict(json_message)
 
-    # throws an error if
+    # FIXME: trasnfer try except into util.py
     try:
         unix_date = data.fitted_function(message.forward_from.id)
         date = datetime.utcfromtimestamp(unix_date).strftime(
                                          config.REPLIES["age"])
+
         json_message["forward_from"]["registered"] = date
-    except AttributeError:
+    except:
         unix_date = data.fitted_function(message.from_user.id)
         date = datetime.utcfromtimestamp(unix_date).strftime(
                                          config.REPLIES["age"])

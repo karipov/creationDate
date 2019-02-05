@@ -16,6 +16,9 @@ class Config():
 
 
     def _unpack_settings(self, settings: str = "setup.json") -> dict:
+        """
+        Unpacks JSON settings file into a python dict
+        """
         settings_path = Path.cwd().joinpath(self.dir, settings)
 
         with open(settings_path) as string_data:
@@ -25,7 +28,11 @@ class Config():
 
 
     def _unpack_replies(self, replies: str = "replies.json") -> dict:
+        """
+        Unpacks JSON replies file into a python dict
+        """
         replies_path = Path.cwd().joinpath(self.dir, replies)
+
         with open(replies_path) as string_data:
             replies = load(string_data)
 
