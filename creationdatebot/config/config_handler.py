@@ -5,7 +5,6 @@ from json import load
 
 
 class Config():
-
     def __init__(self,
                  settings: str = "setup.json",
                  dir: str = "creationdatebot/config"):

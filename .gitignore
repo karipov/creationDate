@@ -1,7 +1,8 @@
 # Telegram token information
-#Â creationdatebot/config/setup.json
+ creationdatebot/config/setup.json
+
 # User associated data
-# creationdatebot/data/dates.json
+creationdatebot/data/dates.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
