@@ -12,7 +12,6 @@ def msg_to_dict(message: object) -> dict:
     for key in list(clean.keys()):
         if key == "forward_from":
             del clean[key]["is_bot"]
-            # del clean[key]["language_code"]
             continue
         if key == "from":
             del clean[key]["is_bot"]
