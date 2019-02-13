@@ -8,8 +8,6 @@ def msg_to_dict(message: object) -> dict:
     """
     message = message.__dict__
     clean = message["json"] # gets rid of pyTelegramBotAPI "null" values
-    # clean_keys = list(clean.keys()) # prevent runtime error due to dict changing size
-    # print(clean)
 
     for key in list(clean.keys()):
         if key == "forward_from":
