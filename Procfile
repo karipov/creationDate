@@ -1,1 +1,1 @@
-python3 creationdatebot/bot.py
+web: python3 creationdatebot/bot.py
