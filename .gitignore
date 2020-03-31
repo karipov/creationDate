@@ -3,7 +3,7 @@ src/data/
 !src/data/dates.json.example
 
 # Config files
-config.json
+src/config.json
 
 # Vscode
 .vscode/
