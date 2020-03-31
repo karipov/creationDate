@@ -1,0 +1,113 @@
+{
+  "LANGS": ["en", "pl", "fa", "tr", "ru"],
+  "LANGS_NAMES": ["English", "Polskie", "فارسی", "Türkçe", "Русский"],
+  "start":
+  {
+    "en": "To use, please send a message or forward one for who's account you'd like to know the creation date.",
+    "ru": "Чтобы начать использовать бота, отправьте ему сообщение или перешлите сообщение от аккаунта дату создания которого вы хотите узнать.",
+    "pl": "Aby korzystać z bota, kopiuj albo prześlij wiadomość konta (użytkownika) którego datę stworzenia chcesz uzyskać.",
+    "fa": "برای استفاده، لطفاً یک پیام از خودتان یا از شخصی که میخواهید تاریخ ایجاد حسابش را بفهمید‌ هدایت (Forward) کنید.",
+    "tr": "Kullanmak için lütfen birinin mesajını yönlendirin ve hesabını ne zaman oluşturduğunu yaklaşık olarak öğrenin."
+  },
+
+  "lang":
+  {
+    "en": "Please select your preferred language with the command /lang followed by the language short code. For example, <code>/lang ru</code> for Russian.",
+    "ru": "Пожалуйста выберите язык с командой /lang за которой следует короткий код вашего языка. Например <code>/lang en</code> для Английского.",
+    "pl": "Wybierz język oprogramowania rozkazem /lang (kod ISO języka). W przypadku języka polskiego: /lang pl.",
+    "fa": "لطفاً زبان ترجیحی خود را با استفاده از دستور /lang به همراه کد زبان انتخاب کنید. مثلاً، <code>/lang en</code> برای زبان انگلیسی.",
+    "tr": "Lütfen tercih ettiğiniz dili komut /lang komutunu kullanarak ve ardından dil kısa kodunu yazarak seçin. Örneğin, Rusça için <code>/lang ru</code>."
+  },
+  "lang_success": {
+    "en": "Language successfully set to English.",
+    "ru": "Язык был успешно установлен на Русский.",
+    "pl": "Pomyślnie ustawiono język na język Polski.",
+    "fa": "زبان با موفقیت به فارسی تغییر کرد.",
+    "tr": "Dil başarılı bir şekilde Türkçeye ayarlandı."
+  },
+
+  "help":
+  {
+    "en": "This bot is still in development. Message @tgcode for any issues\n\n Available commands:\n <code>/lang [code]</code> - set your language\n <code>/id [userID]</code> - get account creation date by ID that you provide\n\nYou can use the bot by sending a message to it, which will return your account's creation date or by forwarding a message from the user, which will show the account creation date for both your and their accounts.",
+    "ru": "Данный бот находится в постоянной разработке. Если есть проблемы, пишите @tgcode\n\n Доступные команды:\n <code>/lang [code]</code> - установите язык\n <code>/id [userID]</code> - получите дату создания аккаунта через id юзера\n\nВы можете использовать этого бота отправив ему сообщение от себя, на что он ответит датой создания вашего аккаунта. Вы также можете переслать сообщения от какого либо аккаунта - в этом случае вы получите дату создания вашего аккаунта на ряду с датой создания аккаунта от которого вы переслали сообщение.",
+    "pl": "Ten bot jest nadal w fazie rozwoju. W razie problemów, wyślij wiadomość do @tgcode (po angielsku lub rosyjsku)\n\n Dostępne polecenia:\n <code>/lang [kod ISO języka]</code> - aby ustawić język bota\n <code>/id [userID]</code> - aby uzyskać datę stworzenia określonego konta\n\nMożna korzystać z bota poprzez wysyłanie mu wiadomości, na które odpowiedzią będzie data utworzenia konta do którego wiadomość należy.",
+    "fa": "این ربات هنوز در حال توسعه است. در صورت بروز مشکل با @tgcode تماس بگیرید.\n\nدستورات موجود: \n <code>/lang [کد]</code> - تنظیم زبان \n <code>/id [آی‌دی‌کاربر]</code> - دریافت تاریخ ایجاد یک حساب بوسیله آی‌دی ای که ارائه می‌دهید. \n\n شما میتوانید با ارسال یک پیام به ربات از آن استفاده کنید. که در اینصورت، تاریخ ایجاد حسابتان را خواهید فهمید. همینطور، با هدایت (Forward) از حساب دیگر، تاریخ ایجاد حساب هر دوی شما نشان داده می‌شود.",
+    "tr": "Bot hala geliştirilme aşamasındadır. Herhangi bir sorun ve öneri için @tgcode yazınız.\n\n Kullanılabilir komutlar:\n <code>/lang [code]</code> - dilini ayarla\n <code>/id [userID]</code> - ID numaranız ile hesap oluşturma tarihinizi öğrenin \n\nBota, hesabınızın oluşturma tarihini öğrenmek istediğiniz herhangi birinin mesajını yönlendirin. Hem kendinizin hemde yönlendirdiğiniz mesajdaki kişinin hesabını oluşturma tarihini öğrenebilirsiniz."
+  },
+
+  "credits":
+  {
+    "en": "Credits to:\n<a href=\"tg://user?id=106596774\">vaprio</a> - bot developer & russian translation\n<a href=\"tg://user?id=430789573\">Younes</a> - persian translation\n<a href=\"tg://user?id=184752635\">M. Furkan</a> - turkish translation\n<a href=\"tg://user?id=245265010\">Michal Nowacki</a> - polish translation",
+    "ru": "Наша признательность:\n<a href=\"tg://user?id=106596774\">vaprio</a> - разработчик бота и перевод на русский\n<a href=\"tg://user?id=430789573\">Younes</a> - перевод на персидский\n<a href=\"tg://user?id=184752635\">M. Furkan</a> - перевод на турецкий\n<a href=\"tg://user?id=245265010\">Michal Nowacki</a> - перевод на польский",
+    "pl": "Uznanie za udział w rozwoju bota:\n<a href=\"tg://user?id=106596774\">vaprio</a> - deweloper i przekład na język rosyjski\n<a href=\"tg://user?id=430789573\">Younes</a> - przekład na język perski\n<a href=\"tg://user?id=184752635\">M. Furkan</a> - przekład na język turecki\n<a href=\"tg://user?id=245265010\">Michal Nowacki</a> - przekład na język polski",
+    "fa": "Credits to:\n<a href=\"tg://user?id=106596774\">vaprio</a> - توسعه‌دهنده ربات و ترجمه روسی\n<a href=\"tg://user?id=430789573\">Younes</a> - ترجمه فارسی\n<a href=\"tg://user?id=184752635\">M. Furkan</a> - ترجمه ترکی\n<a href=\"tg://user?id=245265010\">Michal Nowacki</a> - ترجمه لهستانی",
+    "tr": "Destek olanlar:\n<a href=\"tg://user?id=106596774\">vaprio</a> - Bot yapımcısı & Rusça çeviri\n<a href=\"tg://user?id=430789573\">Younes</a> - Farsça Çeviri\n<a href=\"tg://user?id=184752635\">M. Furkan</a> - Türkçe Çeviri\n<a href=\"tg://user?id=245265010\">Michal Nowacki</a> - Polonyaca Çeviri"
+  },
+
+  "int_failure":
+  {
+    "en": "The ID you've provided isn't a number. Please try again.",
+    "ru": "ID который вы ввели не является числом. Попробуйте ещё раз.",
+    "pl": "Podany numer ID nie jest liczbą. Spróbuj ponownie.",
+    "fa": "آی‌دی ای که ارائه داده‌اید نامعتبر است. لطفاً دوباره امتحان کنید.",
+    "tr": "Sağladığınız kimlik numarası değil. Lütfen tekrar deneyin."
+  },
+  "no_id": {
+    "en": "You haven't provided an ID to interpolate for. Please write the command in the format <code>/id YOURIDHERE</code>",
+    "ru": "Вы не ввели ID для интерполяции. Команда должна быть написана в форме <code>/id ВАШЕЧИСЛОСЮДА</code>",
+    "pl": "Nie podano numeru ID dla którego interpolować. Polecenie ma format <code>/id NUMERID</code>",
+    "fa": "شما هیچ آی‌دی ای ارائه نداده‌اید که تعبیه شود. لطفاً دستور را با فرمت زیر اجرا کنید: <code>/id شماره‌آی‌دی</code>",
+    "tr": "İnterpolasyon yapmak için bir kimlik girmediniz. Lütfen komutu <code> /id YOURIDHERE </code> biçiminde yazın"
+  },
+  "overflow_id":
+  {
+    "en": "The ID you've entered is too large. Please try a lower number.",
+    "ru": "Введённый ID слишком большой. Попробуйте число ниже.",
+    "pl": "Podany numer ID jest za duży. Podaj mniejszy numer i spróbuj ponownie.",
+    "fa": "آی‌دی ای که وارد کردید، خیلی بزرگ است. لطفاً یک شماره کوتاه‌تر امتحان کنید.",
+    "tr": "Girdiğiniz kimlik çok büyük. Lütfen daha düşük bir sayı deneyin."
+  },
+  "negative_id":
+  {
+    "en": "The ID you've provided is negative. Currently, this bot supports only private accounts with positive ID's. /help.",
+    "ru": "ID который вы ввели является негативным. На данный момент, этот бот поддерживает только частные аккаунты с позитивными ID. /help.",
+    "pl": "Podany numer ID ma ujemną wartość. W tej chwili, ten bot tylko obsługuje prywatne konta z pozytywną wartością numeru ID. Aby uzyskać więcej informacji, użyj polecenia /help.",
+    "fa": "آی‌دی ای که وارد کردید، منفی است. در حال حاضر، این ربات فقط حساب‌های شخصی با آی‌دی مثبت را پشتیبانی می‌کند. /help",
+    "tr": "Sağladığınız kimlik negatif. Şu anda, bu bot yalnızca pozitif kimliği olan özel hesapları destekliyor. /help."
+  },
+
+  "inline_handler_title":
+  {
+    "en": "Account Creation Date",
+    "ru": "Дата Создания Аккаунта",
+    "pl": "Data Utworzenia Konta",
+    "fa": "تاریخ ایجاد حساب",
+    "tr": "Hesap Oluşturma Tarihi"
+  },
+  "inline_handler_content":
+  {
+    "en": "result",
+    "ru": "результат",
+    "pl": "wynik",
+    "fa": "نتيجه",
+    "tr": "sonuç"
+  },
+
+  "age": "~ %Y-%m-%d",
+  "message":
+  {
+    "en": "Message\n",
+    "ru": "Сообщение\n",
+    "pl": "Wiadomość\n",
+    "fa": "Message\n",
+    "tr": "Mesaj\n"
+  },
+  "deleted":
+  {
+    "en": "<i>Deleted.</i>",
+    "ru": "<i>Удалено.</i>",
+    "pl": "<i>Wiadomość została usunięta.</i>",
+    "fa": "<i>پیغام پاک شد.</i>",
+    "tr": "<i>Silinmiş.</i>"
+  }
+}
