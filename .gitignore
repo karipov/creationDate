@@ -1,5 +1,12 @@
-# Trash
-trash/
+# User data
+src/data/
+!src/data/dates.json.example
+
+# Config files
+config.json
+
+# Vscode
+.vscode/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
