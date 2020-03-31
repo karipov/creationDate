@@ -1,5 +1,5 @@
 # User data
-src/data/
+src/data/*
 !src/data/dates.json.example
 
 # Config files
