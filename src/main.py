@@ -16,9 +16,16 @@ CONFIG = json.load(open(Path.cwd().joinpath('src/config.json')))
 bot = Bot(token=CONFIG['TOKEN'])
 dp = Dispatcher(bot=bot)
 
-dp.register_message_handler(admin.stats, commands=['stats'])
+# Message handlers
+dp.register_message_handler(
+    admin.stats, commands=['stats'], user_id=CONFIG['ADMINS']
+)
 dp.register_message_handler(service.start, commands=['start'])
 dp.register_message_handler(service.lang, commands=['lang'])
+dp.register_message_handler(service.help, commands=['help'])
+dp.register_message_handler(service.credits, commands=['credits'])
+
+# Callback handlers
 dp.register_callback_query_handler(callback.button_lang)
 
 if __name__ == '__main__':

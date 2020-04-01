@@ -55,3 +55,24 @@ async def lang(message: types.Message):
 
     user.requests += 1
     user.save()
+
+
+async def help(message: types.Message):
+    user = User.get(User.user_id == message.from_user.id)
+
+    await message.answer(
+        text=REPLIES['help'][user.language],
+        parse_mode='HTML'
+    )
+
+    user.requests += 1
+    user.save()
+
+
+async def credits(message: types.Message):
+    user = User.get(User.user_id == message.from_user.id)
+
+    await message.answer(
+        text=REPLIES['credits'][user.language],
+        parse_mode='HTML'
+    )
