@@ -76,3 +76,6 @@ async def credits(message: types.Message):
         text=REPLIES['credits'][user.language],
         parse_mode='HTML'
     )
+
+    user.requests += 1
+    user.save()
