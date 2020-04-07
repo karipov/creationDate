@@ -14,7 +14,10 @@ interpolation = Function()
 
 
 async def reply_with_age(message: types.Message):
-    user = User.get(User.user_id == message.from_user.id)
+    user, _ = User.get_or_create(
+        user_id=message.from_user.id,
+        defaults={'language': 'en'}
+    )
     clean = clean_message(message)
 
     for key, value in clean.items():

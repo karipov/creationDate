@@ -10,7 +10,10 @@ REPLIES = json.load(open(pathlib.Path.cwd().joinpath('src/ui/replies.json')))
 
 
 async def button_lang(query: types.CallbackQuery):
-    user = User.get(User.user_id == query.from_user.id)
+    user, _ = User.get_or_create(
+        user_id=query.from_user.id,
+        defaults={'language': 'en'}
+    )
     bot = Bot.get_current()
 
     # bad clients can send arbitrary callback data

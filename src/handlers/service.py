@@ -45,7 +45,10 @@ async def start(message: types.Message):
 
 
 async def lang(message: types.Message):
-    user = User.get(User.user_id == message.from_user.id)
+    user, _ = User.get_or_create(
+        user_id=message.from_user.id,
+        defaults={'language': 'en'}
+    )
 
     await message.answer(
         text=REPLIES['lang'][user.language],
@@ -58,7 +61,10 @@ async def lang(message: types.Message):
 
 
 async def help(message: types.Message):
-    user = User.get(User.user_id == message.from_user.id)
+    user, _ = User.get_or_create(
+        user_id=message.from_user.id,
+        defaults={'language': 'en'}
+    )
 
     await message.answer(
         text=REPLIES['help'][user.language],
@@ -70,7 +76,10 @@ async def help(message: types.Message):
 
 
 async def credits(message: types.Message):
-    user = User.get(User.user_id == message.from_user.id)
+    user, _ = User.get_or_create(
+        user_id=message.from_user.id,
+        defaults={'language': 'en'}
+    )
 
     await message.answer(
         text=REPLIES['credits'][user.language],
