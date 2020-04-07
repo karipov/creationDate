@@ -3,6 +3,7 @@
   "LANGS_NAMES": ["English", "Polskie", "فارسی", "Türkçe", "Русский"],
   "start":
   {
+    "none": "To use, please send a message or forward one for who's account you'd like to know the creation date.",
     "en": "To use, please send a message or forward one for who's account you'd like to know the creation date.",
     "ru": "Чтобы начать использовать бота, отправьте ему сообщение или перешлите сообщение от аккаунта дату создания которого вы хотите узнать.",
     "pl": "Aby korzystać z bota, kopiuj albo prześlij wiadomość konta (użytkownika) którego datę stworzenia chcesz uzyskać.",
@@ -12,6 +13,7 @@
 
   "lang":
   {
+    "none": "Please select your preferred language with the command /lang followed by the language short code. For example, <code>/lang ru</code> for Russian.",
     "en": "Please select your preferred language with the command /lang followed by the language short code. For example, <code>/lang ru</code> for Russian.",
     "ru": "Пожалуйста выберите язык с командой /lang за которой следует короткий код вашего языка. Например <code>/lang en</code> для Английского.",
     "pl": "Wybierz język oprogramowania rozkazem /lang (kod ISO języka). W przypadku języka polskiego: /lang pl.",
@@ -19,6 +21,7 @@
     "tr": "Lütfen tercih ettiğiniz dili komut /lang komutunu kullanarak ve ardından dil kısa kodunu yazarak seçin. Örneğin, Rusça için <code>/lang ru</code>."
   },
   "lang_success": {
+    "none": "Language successfully set to English.",
     "en": "Language successfully set to English.",
     "ru": "Язык был успешно установлен на Русский.",
     "pl": "Pomyślnie ustawiono język na język Polski.",
@@ -28,6 +31,7 @@
 
   "help":
   {
+    "none": "This bot is still in development. Message @tgcode for any issues\n\n Available commands:\n <code>/lang [code]</code> - set your language\n <code>/id [userID]</code> - get account creation date by ID that you provide\n\nYou can use the bot by sending a message to it, which will return your account's creation date or by forwarding a message from the user, which will show the account creation date for both your and their accounts.", 
     "en": "This bot is still in development. Message @tgcode for any issues\n\n Available commands:\n <code>/lang [code]</code> - set your language\n <code>/id [userID]</code> - get account creation date by ID that you provide\n\nYou can use the bot by sending a message to it, which will return your account's creation date or by forwarding a message from the user, which will show the account creation date for both your and their accounts.",
     "ru": "Данный бот находится в постоянной разработке. Если есть проблемы, пишите @tgcode\n\n Доступные команды:\n <code>/lang [code]</code> - установите язык\n <code>/id [userID]</code> - получите дату создания аккаунта через id юзера\n\nВы можете использовать этого бота отправив ему сообщение от себя, на что он ответит датой создания вашего аккаунта. Вы также можете переслать сообщения от какого либо аккаунта - в этом случае вы получите дату создания вашего аккаунта на ряду с датой создания аккаунта от которого вы переслали сообщение.",
     "pl": "Ten bot jest nadal w fazie rozwoju. W razie problemów, wyślij wiadomość do @tgcode (po angielsku lub rosyjsku)\n\n Dostępne polecenia:\n <code>/lang [kod ISO języka]</code> - aby ustawić język bota\n <code>/id [userID]</code> - aby uzyskać datę stworzenia określonego konta\n\nMożna korzystać z bota poprzez wysyłanie mu wiadomości, na które odpowiedzią będzie data utworzenia konta do którego wiadomość należy.",
@@ -37,6 +41,7 @@
 
   "credits":
   {
+    "none": "Credits to:\n<a href=\"tg://user?id=106596774\">vaprio</a> - bot developer & russian translation\n<a href=\"tg://user?id=430789573\">Younes</a> - persian translation\n<a href=\"tg://user?id=184752635\">M. Furkan</a> - turkish translation\n<a href=\"tg://user?id=245265010\">Michal Nowacki</a> - polish translation",
     "en": "Credits to:\n<a href=\"tg://user?id=106596774\">vaprio</a> - bot developer & russian translation\n<a href=\"tg://user?id=430789573\">Younes</a> - persian translation\n<a href=\"tg://user?id=184752635\">M. Furkan</a> - turkish translation\n<a href=\"tg://user?id=245265010\">Michal Nowacki</a> - polish translation",
     "ru": "Наша признательность:\n<a href=\"tg://user?id=106596774\">vaprio</a> - разработчик бота и перевод на русский\n<a href=\"tg://user?id=430789573\">Younes</a> - перевод на персидский\n<a href=\"tg://user?id=184752635\">M. Furkan</a> - перевод на турецкий\n<a href=\"tg://user?id=245265010\">Michal Nowacki</a> - перевод на польский",
     "pl": "Uznanie za udział w rozwoju bota:\n<a href=\"tg://user?id=106596774\">vaprio</a> - deweloper i przekład na język rosyjski\n<a href=\"tg://user?id=430789573\">Younes</a> - przekład na język perski\n<a href=\"tg://user?id=184752635\">M. Furkan</a> - przekład na język turecki\n<a href=\"tg://user?id=245265010\">Michal Nowacki</a> - przekład na język polski",
@@ -46,6 +51,7 @@
 
   "int_failure":
   {
+    "none": "The ID you've provided isn't a number. Please try again.",
     "en": "The ID you've provided isn't a number. Please try again.",
     "ru": "ID который вы ввели не является числом. Попробуйте ещё раз.",
     "pl": "Podany numer ID nie jest liczbą. Spróbuj ponownie.",
@@ -53,6 +59,7 @@
     "tr": "Sağladığınız kimlik numarası değil. Lütfen tekrar deneyin."
   },
   "no_id": {
+    "none": "You haven't provided an ID to interpolate for. Please write the command in the format <code>/id YOURIDHERE</code>",
     "en": "You haven't provided an ID to interpolate for. Please write the command in the format <code>/id YOURIDHERE</code>",
     "ru": "Вы не ввели ID для интерполяции. Команда должна быть написана в форме <code>/id ВАШЕЧИСЛОСЮДА</code>",
     "pl": "Nie podano numeru ID dla którego interpolować. Polecenie ma format <code>/id NUMERID</code>",
@@ -61,6 +68,7 @@
   },
   "overflow_id":
   {
+    "none": "The ID you've entered is too large. Please try a lower number.",
     "en": "The ID you've entered is too large. Please try a lower number.",
     "ru": "Введённый ID слишком большой. Попробуйте число ниже.",
     "pl": "Podany numer ID jest za duży. Podaj mniejszy numer i spróbuj ponownie.",
@@ -69,6 +77,7 @@
   },
   "negative_id":
   {
+    "none": "The ID you've provided is negative. Currently, this bot supports only private accounts with positive ID's. /help.",
     "en": "The ID you've provided is negative. Currently, this bot supports only private accounts with positive ID's. /help.",
     "ru": "ID который вы ввели является негативным. На данный момент, этот бот поддерживает только частные аккаунты с позитивными ID. /help.",
     "pl": "Podany numer ID ma ujemną wartość. W tej chwili, ten bot tylko obsługuje prywatne konta z pozytywną wartością numeru ID. Aby uzyskać więcej informacji, użyj polecenia /help.",
@@ -78,6 +87,7 @@
 
   "inline_handler_title":
   {
+    "none": "Account Creation Date",
     "en": "Account Creation Date",
     "ru": "Дата Создания Аккаунта",
     "pl": "Data Utworzenia Konta",
@@ -86,6 +96,7 @@
   },
   "inline_handler_content":
   {
+    "none": "result",
     "en": "result",
     "ru": "результат",
     "pl": "wynik",
@@ -96,6 +107,7 @@
   "age": "~ %Y-%m-%d",
   "message":
   {
+    "none": "Message\n",
     "en": "Message\n",
     "ru": "Сообщение\n",
     "pl": "Wiadomość\n",
@@ -104,6 +116,7 @@
   },
   "deleted":
   {
+    "none": "<i>Deleted.</i>",
     "en": "<i>Deleted.</i>",
     "ru": "<i>Удалено.</i>",
     "pl": "<i>Wiadomość została usunięta.</i>",
