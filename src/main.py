@@ -32,6 +32,7 @@ dp.register_message_handler(app.reply_with_age)
 
 # Callback handlers
 dp.register_callback_query_handler(callback.button_lang)
+dp.register_inline_handler(callback.query_with_age)
 
 # Error handlers
 dp.register_errors_handler(excepts.on_err, exception=TelegramAPIError)
