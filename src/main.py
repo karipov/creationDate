@@ -7,13 +7,15 @@ from handlers import admin, service, callback, app, excepts
 from aiogram import Bot, Dispatcher, executor
 from aiogram.utils.exceptions import TelegramAPIError
 
+CONFIG = json.load(open(Path.cwd().joinpath('src/config.json')))
 
 logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(message)s'
+    level=logging.DEBUG,
+    format='%(asctime)s - %(name)s - %(message)s',
+    filename=CONFIG['LOGFILE'],
+    filemode='w'
 )
 
-CONFIG = json.load(open(Path.cwd().joinpath('src/config.json')))
 bot = Bot(token=CONFIG['TOKEN'])
 dp = Dispatcher(bot=bot)
 
