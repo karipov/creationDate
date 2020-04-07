@@ -1,18 +1,8 @@
 # Log files
 creationDateLog.log
 
-# User data
-src/data/*
-!src/data/dates.json.example
-
-# Config files
-src/config.json
-scripts/server_sync.sh
-creationDate.service
-
-# Vscode & trash
+# Vscode
 .vscode/
-*.DS_Store
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
