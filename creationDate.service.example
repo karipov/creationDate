@@ -1,0 +1,7 @@
+[Unit]
+Description=Interpolates creation dates for telegram accounts
+
+[Service]
+WorkingDirectory=/home/<user>/<path to project folder>
+ExecStart=<path to virtualenv python> src/main.py
+Environment=PYTHONUNBUFFERED=1
