@@ -63,7 +63,7 @@ async def query_with_age(query: types.InlineQuery):
                 description=REPLIES['inline_handler_content'][user.language]
             )
         ],
-        cache_time=1,
+        cache_time=300,
         is_personal=True
     )
 
