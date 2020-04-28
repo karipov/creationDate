@@ -1,5 +1,6 @@
 # Log files
 creationDateLog.log
+src/data/users.db
 
 # Vscode
 .vscode/
