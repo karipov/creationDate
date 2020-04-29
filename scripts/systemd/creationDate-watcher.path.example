@@ -1,0 +1,6 @@
+[Path]
+Unit=creationDate-watcher.service
+PathModified=<path to creationDate folder>
+
+[Install]
+WantedBy=default.target

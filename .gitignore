@@ -9,7 +9,8 @@ src/data/*
 # Config files
 src/config.json
 scripts/server_sync.sh
-creationDate.service
+scripts/systemd/*
+!scripts/systemd/*.example
 
 # Vscode & trash
 .vscode/

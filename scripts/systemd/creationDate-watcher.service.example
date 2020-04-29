@@ -1,0 +1,11 @@
+[Unit]
+Description=CreationDate service restarter
+
+[Service]
+Type=oneshot
+ExecStart=<path to systemctl> --user restart creationDate.service
+StartLimitIntervalSec=10
+StartLimitBurst=5
+
+[Install]
+WantedBy=default.target
