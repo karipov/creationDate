@@ -11,6 +11,8 @@ matplotlib = "*"
 aiogram = "*"
 peewee = "*"
 numpy = "*"
+telethon = "*"
+colorlog = "*"
 
 [requires]
 python_version = "3.7"
