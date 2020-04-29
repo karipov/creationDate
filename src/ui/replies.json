@@ -84,6 +84,14 @@
     "fa": "آی‌دی ای که وارد کردید، منفی است. در حال حاضر، این ربات فقط حساب‌های شخصی با آی‌دی مثبت را پشتیبانی می‌کند. /help",
     "tr": "Sağladığınız kimlik negatif. Şu anda, bu bot yalnızca pozitif kimliği olan özel hesapları destekliyor. /help."
   },
+  "no_username": {
+    "none": "Error! This username does not belong to anyone. Please try again",
+    "en": "Error! This username does not belong to anyone. Please try again.",
+    "ru": "Ошибка! Это имя пользователя не принадлежит никому.",
+    "pl": "Błąd! Nie znalazłem nikogo z taką nazwą użytkownika. Spróbuj ponownie.",
+    "fa": "خطا! این نام کاربری متعلق به کسی نیست.",
+    "tr": "Hata! Bu kullanıcı adı kimseye ait değil."
+  },
 
   "inline_handler_title":
   {
@@ -113,6 +121,14 @@
     "pl": "Wiadomość\n",
     "fa": "Message\n",
     "tr": "Mesaj\n"
+  },
+  "user": {
+    "none": "User\n",
+    "en": "User\n",
+    "ru": "Пользователь\n",
+    "pl": "Użytkownik\n",
+    "fa": "User\n",
+    "tr": "Kullanıcı\n"
   },
   "deleted":
   {
