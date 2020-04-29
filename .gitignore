@@ -1,5 +1,6 @@
 # Log files
-creationDateLog.log
+logs/*
+!logs/README.md
 
 # User data
 src/data/*

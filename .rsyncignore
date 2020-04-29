@@ -1,8 +1,16 @@
 # Log files
-creationDateLog.log
-src/data/users.db
+logs/*
+!logs/README.md
 
-# Vscode
+# Data files
+src/data/*
+!src/data/dates.json
+
+# Config files
+src/config.json.example
+
+# Vscode & Trash
+*.DS_Store
 .vscode/
 
 # Byte-compiled / optimized / DLL files
