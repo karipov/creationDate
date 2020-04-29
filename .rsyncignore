@@ -7,7 +7,7 @@ src/data/*
 !src/data/dates.json
 
 # Config files
-src/config.json.example
+*.example
 
 # Vscode & Trash
 *.DS_Store
