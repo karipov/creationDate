@@ -1,4 +1,23 @@
 {
-    "TOKEN": "...",
+    // aiogram bot tokens
+    "AIOGRAM": {
+        "TOKEN": "...",
+        "TOKEN_DEV": "..."
+    },
+    
+    // telethon mtproto telegram vars
+    "TELETHON": {
+        "API_ID": "...",
+        "API_HASH": "...",
+        "SESSION": "src/data/telethon"
+    },
+
+    // loging locations
+    "LOG": {
+        "DEBUG": "logs/debug.log",
+        "INFO": "logs/info.log",
+        "ERR": "logs/err.log"
+    },
+
     "ADMINS": [...]
 }

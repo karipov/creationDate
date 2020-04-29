@@ -20,9 +20,3 @@ async def on_err(event: types.Update, exception: Exception):
     )
 
     return True
-
-
-async def err_expected(message: types.Message):
-    bot = Bot.get_current()
-
-    await bot.send_message(1212, 'this will lead to an error...')
