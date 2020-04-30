@@ -1,8 +1,10 @@
 import pathlib, json  # noqa: E401
 import logging
+
 from aiogram import Bot, types
 
 CONFIG = json.load(open(pathlib.Path.cwd().joinpath('src/config.json')))
+logger = logging.getLogger(__name__)
 
 
 async def on_err(event: types.Update, exception: Exception):
@@ -15,7 +17,7 @@ async def on_err(event: types.Update, exception: Exception):
         )
 
     # logs the error in the logger
-    logging.critical(
+    logger.critical(
         f'<{exception}> ocurred on event: {event}'
     )
 

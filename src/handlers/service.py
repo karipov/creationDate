@@ -2,7 +2,10 @@
 Service messages for commands such as /help and /start
 """
 import json, pathlib  # noqa: E401
+import logging
+
 from aiogram import types
+
 from process.database import User
 
 
@@ -13,6 +16,7 @@ LANG_KEY.add(
         REPLIES['LANGS_NAMES'], REPLIES['LANGS']
     ))
 )
+logger = logging.getLogger(__name__)
 
 
 async def start(message: types.Message):
@@ -20,6 +24,10 @@ async def start(message: types.Message):
     Handler for /start commands
     """
     user, _ = User.get_or_create(user_id=message.from_user.id)
+
+    logger.info(
+        f"{user.user_id} entered /start"
+    )
 
     if not user.language == 'none':
         await message.answer(REPLIES['start'][user.language])
@@ -56,6 +64,10 @@ async def lang(message: types.Message):
         parse_mode='HTML'
     )
 
+    logger.info(
+        f"{user.user_id} entered /lang"
+    )
+
     user.requests += 1
     user.save()
 
@@ -71,6 +83,10 @@ async def help(message: types.Message):
         parse_mode='HTML'
     )
 
+    logger.info(
+        f"{user.user_id} entered /help"
+    )
+
     user.requests += 1
     user.save()
 
@@ -84,6 +100,10 @@ async def credits(message: types.Message):
     await message.answer(
         text=REPLIES['credits'][user.language],
         parse_mode='HTML'
+    )
+
+    logger.info(
+        f"{user.user_id} entered /credits"
     )
 
     user.requests += 1

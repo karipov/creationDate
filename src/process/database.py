@@ -1,9 +1,14 @@
 from pathlib import Path
+
 from peewee import Model, SqliteDatabase
 from peewee import CharField, IntegerField, BooleanField
 
+import logging
 
+
+logger = logging.getLogger(__name__)
 db = SqliteDatabase(Path.cwd().joinpath('src/data/users.db'))
+logger.info("SQLite database connection initiated")
 
 
 class User(Model):
@@ -18,3 +23,4 @@ class User(Model):
 
 db.connect()
 db.create_tables([User])
+logger.info("SQLite database connection successful")

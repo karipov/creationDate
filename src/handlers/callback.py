@@ -2,7 +2,10 @@
 Handlers for dealing with callbacks
 """
 import json, pathlib  # noqa: E401
+import logging
+
 from aiogram import Bot, types
+
 from process.database import User
 from process.function import Function
 from process.utility import (
@@ -12,6 +15,7 @@ from process.utility import (
 
 REPLIES = json.load(open(pathlib.Path.cwd().joinpath('src/ui/replies.json')))
 interpolation = Function()
+logger = logging.getLogger(__name__)
 
 
 async def button_lang(query: types.CallbackQuery):
@@ -24,6 +28,11 @@ async def button_lang(query: types.CallbackQuery):
     # bad clients can send arbitrary callback data
     if getattr(query, 'data', None) not in REPLIES['LANGS']:
         return
+
+    logger.info(
+        f"{user.user_id} changed language from {user.language} to "
+        f"{query.data} via button"
+    )
 
     user.language = query.data
     user.save()
@@ -48,6 +57,11 @@ async def query_with_age(query: types.InlineQuery):
             unix_time=interpolation.func(int(clean['id']))
     )
     clean['registered'] = date
+
+    logger.info(
+        f"{user.user_id} requested date for ID {int(clean['id'])} "
+        f"via InlineQuery, received date {date}"
+    )
 
     escaped = escape_dict(clean)
     tree = REPLIES['message'][user.language] + tree_display(escaped)
