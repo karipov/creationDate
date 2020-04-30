@@ -51,6 +51,7 @@ client = TelegramClient(
     api_id=CONFIG['TELETHON']['API_ID'],
     api_hash=CONFIG['TELETHON']['API_HASH']
 )
+client.flood_sleep_threshold = 5
 client.start()
 
 
