@@ -7,6 +7,7 @@ import logging
 from aiogram import types
 
 from process.database import User
+from . import app
 
 
 REPLIES = json.load(open(pathlib.Path.cwd().joinpath('src/ui/replies.json')))
@@ -31,6 +32,7 @@ async def start(message: types.Message):
 
     if not user.language == 'none':
         await message.answer(REPLIES['start'][user.language])
+        await app.reply_with_age(message)
 
         user.requests += 1
         user.save()
@@ -41,6 +43,7 @@ async def start(message: types.Message):
         reply_markup=LANG_KEY,
         parse_mode='HTML'
     )
+    await app.reply_with_age(message)
 
     # auto-logs a user's language from telegram-given data
     if getattr(message.from_user, 'language_code', None) in REPLIES['LANGS']:
