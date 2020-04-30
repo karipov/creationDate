@@ -92,6 +92,14 @@
     "fa": "خطا! این نام کاربری متعلق به کسی نیست.",
     "tr": "Hata! Bu kullanıcı adı kimseye ait değil."
   },
+  "many_requests": {
+    "none": "Too many requests! Please try again in {}",
+    "en": "Too many requests! Please try again in {}",
+    "ru": "Слишком много запросов! Пожалуйста, попробуйте еще раз через {}",
+    "pl": "Zbyt dużo próśb! Spróbuj ponownie za {}",
+    "fa": "درخواست های بسیار زیاد! لطفاً دوباره در {} امتحان کنید",
+    "tr": "Çok fazla istek! Lütfen {} içinde tekrar deneyin"
+  },
 
   "inline_handler_title":
   {
