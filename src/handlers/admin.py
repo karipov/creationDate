@@ -28,7 +28,12 @@ async def stats(message: types.Message):
         await message.answer(total_users)
 
     elif payload == ['file']:
-        pass
+        file = open(Path.cwd().joinpath('src/data/users.db'), 'rb')
+        input_file = types.InputFile(file)
+
+        await message.answer_document(input_file)
+
+        file.close()
 
     elif payload == ['lang']:
         text = 'Language Percentages:'
