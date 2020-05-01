@@ -84,6 +84,14 @@
     "fa": "آی‌دی ای که وارد کردید، منفی است. در حال حاضر، این ربات فقط حساب‌های شخصی با آی‌دی مثبت را پشتیبانی می‌کند. /help",
     "tr": "Sağladığınız kimlik negatif. Şu anda, bu bot yalnızca pozitif kimliği olan özel hesapları destekliyor. /help."
   },
+  "forward_link": {
+    "none": "Looks like this user has closed their account from displaying their ID. Send the bot their @username to get the creation date.",
+    "en": "Looks like this user has closed their account from displaying their ID. Send the bot their @username to get the creation date.",
+    "ru": "Похоже, этот пользователь закрыл свою учетную запись для отображения своего идентификатора. Отправьте боту его @username, чтобы узнать дату создания.",
+    "pl": "Wygląda na to, że ten użytkownik zamknął swoje konto przed wyświetlaniem swojego identyfikatora. Wyślij botowi jego @username, aby uzyskać datę utworzenia.",
+    "fa": "به نظر می‌رسد این کاربر حسابش را جهت نمایش آ‌ی‌دی عددی بسته است. به جای آن @username آن کاربر را ارسال کنید تا تاریخ ایجاد حسابش را بدست بیاورید.",
+    "tr": "Bu kullanıcının hesabını kimliğini göstermesini kapattığı anlaşılıyor. Oluşturma tarihini öğrenmek için bota @username adını gönderin."
+  },
   "no_username": {
     "none": "Error! This username does not belong to anyone. Please try again",
     "en": "Error! This username does not belong to anyone. Please try again.",

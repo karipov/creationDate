@@ -25,6 +25,13 @@ async def reply_with_age(message: types.Message):
         user_id=message.from_user.id,
         defaults={'language': 'en'}
     )
+
+    if message.forward_sender_name:
+        await message.answer(
+            text=REPLIES['forward_link'][user.language]
+        )
+        return
+
     clean = clean_message(message)
 
     for key, value in clean.items():
