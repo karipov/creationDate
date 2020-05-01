@@ -5,6 +5,7 @@ import json, pathlib  # noqa: E401
 import logging
 
 from aiogram import Bot, types
+from aiogram.utils.exceptions import MessageNotModified
 
 from process.database import User
 from process.function import Function
@@ -38,11 +39,14 @@ async def button_lang(query: types.CallbackQuery):
     user.save()
 
     await query.answer()
-    await bot.edit_message_text(
-        text=REPLIES['lang_success'][query.data],
-        message_id=query.message.message_id,
-        chat_id=query.from_user.id
-    )
+    try:
+        await bot.edit_message_text(
+            text=REPLIES['lang_success'][query.data],
+            message_id=query.message.message_id,
+            chat_id=query.from_user.id
+        )
+    except MessageNotModified:
+        pass  # silence this error
 
 
 async def query_with_age(query: types.InlineQuery):
