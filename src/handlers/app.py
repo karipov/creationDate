@@ -27,6 +27,7 @@ async def reply_with_age(message: types.Message):
     )
 
     if message.forward_sender_name:
+        logger.info(f"{user.user_id} requested blocked ID on forward")
         await message.answer(
             text=REPLIES['forward_link'][user.language]
         )

@@ -30,26 +30,25 @@ async def start(message: types.Message):
         f"{user.user_id} entered /start"
     )
 
-    if not user.language == 'none':
-        await message.answer(REPLIES['start'][user.language])
-        await app.reply_with_age(message)
+    if user.language == 'none':
+        # auto-logs a user's language from telegram-given data
+        if getattr(
+            message.from_user, 'language_code', None
+        ) in REPLIES['LANGS']:
+            user.language = message.from_user.language_code
+        else:
+            user.language = 'en'  # default language
 
-        user.requests += 1
         user.save()
-        return
 
-    await message.answer(
-        text=REPLIES['lang']['en'],
-        reply_markup=LANG_KEY,
-        parse_mode='HTML'
-    )
+        await message.answer(
+            text=REPLIES['lang']['en'],
+            reply_markup=LANG_KEY,
+            parse_mode='HTML'
+        )
+
+    await message.answer(REPLIES['start'][user.language])
     await app.reply_with_age(message)
-
-    # auto-logs a user's language from telegram-given data
-    if getattr(message.from_user, 'language_code', None) in REPLIES['LANGS']:
-        user.language = message.from_user.language_code
-    else:
-        user.language = 'en'  # default language
 
     user.requests += 1
     user.save()
