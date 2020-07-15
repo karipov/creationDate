@@ -68,6 +68,7 @@ dp.register_message_handler(service.start, commands=['start'])
 dp.register_message_handler(service.lang, commands=['lang'])
 dp.register_message_handler(service.help, commands=['help'])
 dp.register_message_handler(service.credits, commands=['credits'])
+dp.register_message_handler(app.reply_id, commands=['id'])
 dp.register_message_handler(
     middle.username_reply,
     lambda m: any([x.type == 'mention' for x in m.entities])

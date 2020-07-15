@@ -64,6 +64,41 @@ async def reply_with_age(message: types.Message):
     user.save()
 
 
+async def reply_id(message: types.Message):
+    user, _ = User.get_or_create(
+        user_id=message.from_user.id,
+        defaults={'language': 'en'}
+    )
+
+    payload = message.get_args().split()
+
+    if len(payload) < 1:
+        await message.answer(text=REPLIES['no_id'][user.language])
+        return
+    
+    try:
+        integer_id = int(payload[0])
+    except ValueError:
+        await message.answer(text=REPLIES['int_failure'][user.language])
+        return
+    
+    if integer_id > 1_700_000_000:
+        await message.answer(text=REPLIES['overflow_id'][user.language])
+        return
+    if integer_id < 0:
+        await message.answer(text=REPLIES['negative_id'][user.language])
+        return
+    
+    date_string = time_format(
+        unix_time=interpolation.func(integer_id)
+    )
+    
+    await message.answer(text=date_string)
+
+    logger.info(
+        f"{user.user_id} requested date for id {integer_id} MANUAL, "
+        f"received date {date_string}")
+
 # Middleware function
 # dynamically added to a class; uses self to access the Telethon client.
 async def username_reply(self, message: types.Message):
