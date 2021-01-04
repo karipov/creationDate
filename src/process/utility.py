@@ -26,11 +26,11 @@ def tree_display(input_dict: dict, depth: int = 0) -> str:
     :return: treefied message
     """
 
-    FINAL_CHAR = '  └ '
-    ENTRY_CHAR = '  ├ '
-    SKIP_CHAR = '  ┊ '
-    KEY_CHAR = ': '
-    NEWLINE_CHAR = '\n'
+    FINAL_CHAR = "  └ "
+    ENTRY_CHAR = "  ├ "
+    SKIP_CHAR = "  ┊ "
+    KEY_CHAR = ": "
+    NEWLINE_CHAR = "\n"
 
     # if depth == 0:
     #     out_str = "Message\n"
@@ -53,16 +53,24 @@ def tree_display(input_dict: dict, depth: int = 0) -> str:
                 current_index += 1
 
             if type(value) is dict:
-                out_str = out_str \
-                        + "<b>" + key + "</b>" \
-                        + NEWLINE_CHAR \
-                        + tree_display(value, depth+1)
+                out_str = (
+                    out_str
+                    + "<b>"
+                    + key
+                    + "</b>"
+                    + NEWLINE_CHAR
+                    + tree_display(value, depth + 1)
+                )
             else:
-                out_str = out_str \
-                        + "<b>" + key + "</b>" \
-                        + KEY_CHAR \
-                        + tree_display(value, depth+1) \
-                        + NEWLINE_CHAR
+                out_str = (
+                    out_str
+                    + "<b>"
+                    + key
+                    + "</b>"
+                    + KEY_CHAR
+                    + tree_display(value, depth + 1)
+                    + NEWLINE_CHAR
+                )
     else:
         out_str = str(input_dict)
 
@@ -73,13 +81,13 @@ def clean_message(message: types.Message) -> dict:
     dict_message = message.to_python()
 
     for key in list(dict_message.keys()):
-        if key == 'forward_from':
-            del dict_message[key]['is_bot']
+        if key == "forward_from":
+            del dict_message[key]["is_bot"]
             continue
-        if key == 'from':
-            del dict_message[key]['is_bot']
+        if key == "from":
+            del dict_message[key]["is_bot"]
             continue
-        if key == 'text':
+        if key == "text":
             continue
 
         del dict_message[key]
@@ -87,5 +95,5 @@ def clean_message(message: types.Message) -> dict:
     return dict_message
 
 
-def time_format(unix_time: int, fmt='%Y-%m-%d') -> str:
+def time_format(unix_time: int, fmt="%Y-%m-%d") -> str:
     return datetime.utcfromtimestamp(unix_time).strftime(fmt)

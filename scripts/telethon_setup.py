@@ -2,12 +2,12 @@ from pathlib import Path
 import json
 from telethon import TelegramClient
 
-CONFIG = json.load(open(Path.cwd().joinpath('src/config.json')))
+CONFIG = json.load(open(Path.cwd().joinpath("src/config.json")))
 
 client = TelegramClient(
-    session=str(Path.cwd().joinpath(CONFIG['TELETHON']['SESSION'])),
-    api_id=CONFIG['TELETHON']['API_ID'],
-    api_hash=CONFIG['TELETHON']['API_HASH']
+    session=str(Path.cwd().joinpath(CONFIG["TELETHON"]["SESSION"])),
+    api_id=CONFIG["TELETHON"]["API_ID"],
+    api_hash=CONFIG["TELETHON"]["API_HASH"],
 )
 
 

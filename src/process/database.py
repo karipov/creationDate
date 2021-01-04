@@ -7,13 +7,13 @@ import logging
 
 
 logger = logging.getLogger(__name__)
-db = SqliteDatabase(Path.cwd().joinpath('src/data/users.db'))
+db = SqliteDatabase(Path.cwd().joinpath("src/data/users.db"))
 logger.info("SQLite database connection initiated")
 
 
 class User(Model):
     user_id = IntegerField(primary_key=True)
-    language = CharField(default='none')
+    language = CharField(default="none")
     requests = IntegerField(default=0)
     is_ban = BooleanField(default=False)
 

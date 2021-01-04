@@ -8,7 +8,7 @@ import numpy as np
 class Function:
     def __init__(self, order: int = 3):
         self.order = 3
-        self.data_path = pathlib.Path.cwd().joinpath('src/data/dates.json')
+        self.data_path = pathlib.Path.cwd().joinpath("src/data/dates.json")
 
         self.x, self.y = self._unpack_data()
         self._func = self._fit_data()
@@ -36,7 +36,7 @@ class Function:
 
         data.update([pair])
 
-        with open(self.data_path, 'w') as string_data:
+        with open(self.data_path, "w") as string_data:
             json.dump(data, string_data)
 
         # update the model with new data
@@ -53,16 +53,14 @@ class Function:
         return value
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     # import matplotlib.pyplot as plt
     from datetime import datetime
 
     f = Function(6)
 
     a = f.func(1_300_200_300)
-    print(datetime.utcfromtimestamp(a).strftime(
-        '%Y-%m-%d'
-    ))  # example interpolation
+    print(datetime.utcfromtimestamp(a).strftime("%Y-%m-%d"))  # example interpolation
 
     # plot scatter data + line of best fit
     # plt.scatter(f.x, f.y)

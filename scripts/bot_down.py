@@ -5,11 +5,11 @@ from aiogram import Bot, Dispatcher, executor, types
 
 
 # Load configuration
-CONFIG = json.load(open(Path.cwd().joinpath('src/config.json')))
+CONFIG = json.load(open(Path.cwd().joinpath("src/config.json")))
 
 
 # Initialize
-bot = Bot(token=CONFIG['AIOGRAM']['TOKEN'])
+bot = Bot(token=CONFIG["AIOGRAM"]["TOKEN"])
 dp = Dispatcher(bot=bot)
 
 
