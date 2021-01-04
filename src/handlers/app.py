@@ -6,7 +6,8 @@ import pathlib, json  # noqa: E401
 import logging
 
 from aiogram import types
-from telethon.tl.types import InputPeerUser
+from telethon import functions
+from telethon.tl.types import InputPeerUser, PeerUser
 from telethon.errors import FloodWaitError
 
 from process.database import User
@@ -99,12 +100,29 @@ async def username_reply(self, message: types.Message):
     username = message.entities[0].get_text(message.text)
     # telethon automatically sleeps on FloodError
 
+    #  somebody suggested this might reduce floodwaits??
+    try:
+        entity = (
+            (
+                await self.client(
+                    functions.messages.GetPeerDialogsRequest(peers=[username])
+                )
+            )
+            .dialogs[0]
+            .peer
+        )
+    except (ValueError, FloodWaitError):
+        pass
+
     try:
         entity = await self.client.get_input_entity(username)
     except ValueError:
         await message.answer(text=REPLIES["no_username"][user.language])
         return
     except FloodWaitError as e:
+
+        logger.info(f"2nd FloodWait; {e}")  # temporarily here
+
         sec = e.seconds
         if sec > 60:
             time_left = f"{sec // 60}m {sec % 60}s"
@@ -114,9 +132,10 @@ async def username_reply(self, message: types.Message):
         await message.answer(
             text=REPLIES["many_requests"][user.language].format(time_left)
         )
+
         return
 
-    if not isinstance(entity, InputPeerUser):
+    if not isinstance(entity, InputPeerUser) or isinstance(entity, PeerUser):
         await message.answer(text=REPLIES["no_username"][user.language])
         return
 
