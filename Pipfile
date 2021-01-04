@@ -1,18 +1,16 @@
 [[source]]
-name = "pypi"
 url = "https://pypi.org/simple"
 verify_ssl = true
-
-[dev-packages]
-flake8 = "*"
-matplotlib = "*"
+name = "pypi"
 
 [packages]
 aiogram = "*"
 peewee = "*"
-numpy = "*"
 telethon = "*"
 colorlog = "*"
 
+[dev-packages]
+flake8 = "*"
+
 [requires]
-python_version = "3.7"
+python_version = "3.9"
