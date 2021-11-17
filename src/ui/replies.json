@@ -119,7 +119,7 @@
     "uz": "Interpolyatsiya uchun ID ni kiritmadingiz. Kommanda quyidagicha yozilishi kerak <code>/id KERAKLIID</code>",
     "es": "Usted no ha proporcionado una ID para procesar la búsqueda. Por favor, escriba el comando en el formato <code>/id TUIDAQUI</code>",
     "pt": "Você não forneceu uma ID para processar a busca. Por favor, escreva o comando no formato <code>/id SUAIDAQUI</code>",
-    "n;": "U heeft geen ID opgegeven om voor te interpoleren. Schrijf de opdracht in het formaat <code>/id JOUWID</code>",
+    "nl": "U heeft geen ID opgegeven om voor te interpoleren. Schrijf de opdracht in het formaat <code>/id JOUWID</code>",
     "ckb": "هیچ ناسنامەیەکت پێ نەداوم."
   },
   "overflow_id": {
